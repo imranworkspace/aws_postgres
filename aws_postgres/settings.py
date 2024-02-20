@@ -86,10 +86,10 @@ WSGI_APPLICATION = 'aws_postgres.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'students',
-        'USER': 'imran',
-        'PASSWORD': '12345678',
-        'HOST': 'mymasteruser.c580uqqeiwk6.eu-north-1.rds.amazonaws.com',
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',
         'PORT': '5432',
     }
 }
