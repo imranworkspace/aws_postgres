@@ -82,14 +82,16 @@ WSGI_APPLICATION = 'aws_postgres.wsgi.application'
 #     }
 # }
 
-
+### DB instance identifier : user1 
+### DB Master username : masteruser
+# password : 12345678
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': '',
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
+        'NAME': 'imrandb',
+        'USER': 'mymasteruser',
+        'PASSWORD': '12345678',
+        'HOST': 'backendpdb.c580uqqeiwk6.eu-north-1.rds.amazonaws.com',
         'PORT': '5432',
     }
 }
@@ -128,8 +130,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
+#local path
 STATIC_URL = ' /'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 MEDIA_URLS ='/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Default primary key field type
@@ -139,12 +143,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # aws-s3 bucket
-AWS_ACCESS_KEY_ID = ''
-AWS_SECRET_ACCESS_KEY = '' 
-AWS_STORAGE_BUCKET_NAME = ''
-AWS_S3_SIGNATURE_NAME = '',
-AWS_S3_REGION_NAME = ''
+AWS_ACCESS_KEY_ID = 'AKIA6ODU6DUXBK6LOQW2'
+AWS_SECRET_ACCESS_KEY = '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' 
+AWS_STORAGE_BUCKET_NAME = 's3postdjngnix'
+AWS_S3_SIGNATURE_NAME = 's3v4',
+AWS_S3_REGION_NAME = 'eu-north-1'
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL =  None
 AWS_S3_VERITY = True
-DEFAULT_FILE_STORAGE = ''
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
