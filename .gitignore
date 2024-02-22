@@ -2,6 +2,6 @@ myenv
 aws_postgres/aws_postgres/myenv
 aws_postgres/aws_postgres/migrations/*.pyc
 aws_postgres/api/__pycache__/*.pyc
-# api/migrations/__pycache__/*.pyc
+api/migrations/__pycache__/*.pyc
 aws_postgres/__pycache__/*.pyc
-api/__pycache__/*.pyc
+api/__pycache__/*.pycy
